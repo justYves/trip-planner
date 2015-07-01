@@ -28,12 +28,17 @@ router.get('/', function(req, res, next) {
         done(err, accum);
       });
   }, function(err, result) {
-    console.log(result);
-    res.render("layout", {
+    console.log("result" + result);
+    console.log("error: " + err)
+    res.render("index", {
       result: result
     });
   });
 });
+
+// router.get('/bower_components', function(req, res, next) {
+
+// }
 
 
 module.exports = router;
