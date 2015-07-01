@@ -2,26 +2,82 @@
 {% block content %}
 
 <!-- Hotel -->
-   <h2>Hotel:</h2>
-  <select>
-     {% for hotel in result.hotel %}
-      <option> {{hotel.name}}</option>
-     {% endfor %}
-  </select>
-  <!-- Things to do -->
-  <h2>Things to do:</h2>
-    <select>
-     {% for thingToDo in result.thingToDo %}
-      <option> {{thingToDo.name}}</option>
-     {% endfor %}
-  </select>
-  <!-- Restaurant -->
-  <h2>Restaurant</h2>
-    <select>
-     {% for restaurant in result.restaurant %}
-      <option> {{restaurant.name}}</option>
-     {% endfor %}
-  </select>
+   <h4>Hotel:</h4>
+   <div class="row">
+    <div class="col-lg-10">
+      <select>
+         {% for hotel in result.hotel %}
+          <option> {{hotel.name}}</option>
+         {% endfor %}
+      </select>
+    </div>
+    <div class="col-lg-1">
+      <button type="button" class="btn btn-circle" name="hotel">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+      </div>
+  </div>
 
+  <!-- Restaurant -->
+   <h4>Restaurant:</h4>
+   <div class="row">
+    <div class="col-lg-10">
+      <select>
+         {% for restaurant in result.restaurant %}
+          <option> {{restaurant.name}}</option>
+         {% endfor %}
+      </select>
+    </div>
+    <div class="col-lg-1">
+      <button type="button" class="btn btn-circle" name="hotel">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+      </div>
+  </div>
+
+  <!-- Hotel -->
+   <h4>Things to do:</h4>
+   <div class="row">
+    <div class="col-lg-10">
+      <select>
+         {% for thingToDo in result.thingToDo %}
+          <option> {{thingToDo.name}}</option>
+         {% endfor %}
+      </select>
+    </div>
+    <div class="col-lg-1">
+      <button type="button" class="btn btn-circle" name="hotel">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+      </div>
+  </div>
+
+{% endblock %}
+
+{% block data %}
+
+<h4>My Hotel</h4>
+<div class="row">
+  <div class="col-lg-10">"Address"</div>
+  <div class="col-lg-2">X</div>
+</div>
+<h4>My Restaurant</h4>
+<div class="row">
+  <div class="col-lg-10">"Name"</div>
+  <div class="col-lg-2">X</div>
+</div>
+<div class="row">
+  <div class="col-lg-10">"Name"</div>
+  <div class="col-lg-2">X</div>
+</div>
+<h4>My Things to Do</h4>
+<div class="row">
+  <div class="col-lg-10">"Name"</div>
+  <div class="col-lg-2">X</div>
+</div>
+<div class="row">
+  <div class="col-lg-10">"Name"</div>
+  <div class="col-lg-2">X</div>
+</div>
 
 {% endblock %}

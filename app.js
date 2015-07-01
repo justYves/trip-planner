@@ -12,6 +12,8 @@ var users = require('./routes/users');
 var app = express();
 var swig = require('swig');
 
+
+//GOOGLE API KEY: AIzaSyDvV5E2Q5nWXVlasOKnxIBV1JL0j8J4sWY
 // view engine setup
 app.engine('html', swig.renderFile);
 app.set('views', path.join(__dirname, 'views'));
